@@ -1,0 +1,10 @@
+---
+# tasks file for spotify_plbk
+  - apt_key: keyserver=keyserver.ubuntu.com id=94558F59
+    sudo: true
+
+  - apt_repository: repo='deb http://repository.spotify.com stable non-free' update_cache=yes
+    sudo: true
+
+  - apt: name=spotify-client
+    sudo: true
